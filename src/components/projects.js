@@ -5,7 +5,8 @@ import { projectsData } from '../projectData';
 export const Projects = () => {
   
 
-  const allProjects = projectsData.map(pro => <Project 
+  const allProjects = projectsData.map(pro => <Project
+    key = {pro.name}
     name={pro.name}
     demoUrl = {pro.demoUrl}
     imageUrl = {pro.imageUrl}

@@ -1,36 +1,34 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import Popup from './popup'
+import BasicInfo from './basicInfo';
 
 export const Project = ({ name, demoUrl, imageUrl, description, technologies, repoLink }) => {
   const [toggleOn, setToggle] = useState(false);
 
-  const handleClick = () => {
+  const handleClick = (e) => {
+    setToggle(!toggleOn);
+  }
+
+  const handleClose = () => {
     setToggle(!toggleOn);
   }
   return (
-    <article onClick ={() => handleClick()}>
-      <img src ={imageUrl}>
-      </img>
-      This is my project
-      name:{name}
-      demoUrl: {demoUrl}
-      imageUrl:{imageUrl}
-      description: {description}
-      technologies: {technologies}
-      repoLink:{repoLink}
-      { toggleOn && <div>
-      Its Working man</div> }
+    <article>
+      { !toggleOn && <BasicInfo name={name} handleClick={handleClick}/>}
+    
+    { toggleOn && <Popup name={name} 
+      demoUrl={demoUrl}
+      imageUrl={imageUrl}
+      description = {description}
+      technologies = {technologies}
+      repoLink = {repoLink}
+      handleClose = {handleClose}
+      /> 
+    }
     </article>
-
   )
 }
-
-// name={pro.name}
-// demoUrl = {pro.demoUrl}
-// imageUrl = {pro.imageUrl}
-// description = {pro.description}
-// technologies = {pro.technologies}
-// repoLink = {pro.repoLink}
 
 Project.propTypes = {
   name: PropTypes.string.isRequired,
