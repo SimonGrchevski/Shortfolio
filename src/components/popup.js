@@ -3,21 +3,22 @@ import PropTypes from 'prop-types';
 
 const Popup = ({name, demoUrl, imageUrl, description, technologies, repoLink, handleClose }) => {
   return(
-    <div>
-      <div onClick={() => {
-        handleClose();
-      }}>
-        X
+    <div className="popupWrapper">
+      <div className="popup">
+        <div onClick={() => handleClose()}>
+          X
+        </div>
+        <img src ={imageUrl} alt ={`${name}`} >
+        </img>
+        This is my project
+        name:{name}
+        demoUrl: {demoUrl}
+        description: {description}
+        technologies: {technologies}
+        repoLink:{repoLink}
       </div>
-      <img src ={imageUrl} alt ={`${name}`} >
-      </img>
-      This is my project
-      name:{name}
-      demoUrl: {demoUrl}
-      description: {description}
-      technologies: {technologies}
-      repoLink:{repoLink}
     </div>
+    
   ) 
 }
 
