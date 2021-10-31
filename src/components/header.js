@@ -2,24 +2,29 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Header = () => (
-  <section>
+  <header className="flex space-between">
     <Link to="/">
       <article>
         <h3>Simon Grcevski</h3>
-        <h5>SG</h5>
+        <h5 className="sign">SG</h5>
       </article>
     </Link>
 
-    <article>
+    <article className="flex headerLinks">
+
       <Link to="/projects">
-        <h5>Projects</h5>
+        <section>
+          <h5>Projects</h5>
+        </section>
       </Link>
 
       <Link to="/about">
-        <h5>About me</h5>
+        <section>
+          <h5>About me</h5>
+        </section>
       </Link>
     </article>
-  </section>
+  </header>
 );
 
 export default Header;
