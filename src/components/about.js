@@ -1,9 +1,10 @@
 import React from 'react';
 
 const About = () => (
-  <div>
+  <section className="content">
+
     This is the about me
-  </div>
+  </section>
 );
 
 export default About;

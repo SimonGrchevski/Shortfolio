@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import Popup from './popup';
-import BasicInfo from './basicInfo';
+import Card from './card';
 
 const Project = ({
   name, demoUrl, imageUrl, description, technologies, repoLink,
@@ -17,7 +17,7 @@ const Project = ({
   };
   return (
     <article>
-      { !toggleOn && <BasicInfo name={name} handleClick={handleClick} />}
+      { !toggleOn && <Card name={name} handleClick={handleClick} imageUrl={imageUrl} />}
 
       { toggleOn && (
       <Popup

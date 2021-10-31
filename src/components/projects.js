@@ -15,9 +15,9 @@ const Projects = () => {
     />
   ));
   return (
-    <>
+    <section className="cardsWrapper flex col content">
       { allProjects }
-    </>
+    </section>
   );
 };
 
