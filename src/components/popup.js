@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 const Popup = ({
   name, demoUrl, imageUrl, description, technologies, repoLink, handleClose,
 }) => (
-  <div className="popupWrapper">
+  <div className="popupWrapper fixed">
     <div className="popup">
       {/* eslint-disable-next-line */}
       <div onClick={() => handleClose()}>
