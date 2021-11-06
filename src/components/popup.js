@@ -1,36 +1,31 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import ProjectDetail from './projectDetail';
 
 const Popup = ({
   name, demoUrl, imageUrl, description, technologies, repoLink, handleClose,
 }) => (
-  <div className="popupWrapper fixed">
-    <div className="popup">
+  <section className="popupWrapper fixed">
+    <article className="popup">
       {/* eslint-disable-next-line */}
       <div onClick={() => handleClose()}>
         X
       </div>
+      <div className="popupImageWrapper">
+        <div className="popupImageContainer">
+          <img src={imageUrl} alt={`${name}`} />
+        </div>
+      </div>
       <div>
-        <img src={imageUrl} alt={`${name}`} />
-
-        This is my project
-        name:
-        {name}
-        demoUrl:
-        {' '}
-        {demoUrl}
-        description:
-        {' '}
-        {description}
-        technologies:
-        {' '}
-        {technologies}
-        repoLink:
-        {repoLink}
+        <ProjectDetail label="name" description={name} />
+        <ProjectDetail label="description" description={description} />
+        <ProjectDetail label="technologies" description={technologies} />
+        <div><a href={repoLink}>repoLink</a></div>
+        <div><a href={demoUrl}>demoUrl</a></div>
       </div>
 
-    </div>
-  </div>
+    </article>
+  </section>
 
 );
 

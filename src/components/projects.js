@@ -10,7 +10,7 @@ const Projects = () => {
       demoUrl={pro.demoUrl}
       imageUrl={pro.imageUrl}
       description={pro.description}
-      technologies={pro.technologies}
+      technologies={pro.technologies.join(',')}
       repoLink={pro.repoLink}
     />
   ));

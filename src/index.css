@@ -66,6 +66,10 @@ li {
   justify-content: center;
 }
 
+.text-center {
+  text-align: center;
+}
+
 .items-center {
   align-items: center;
 }
@@ -126,12 +130,28 @@ header {
 }
 
 .popup {
-  width: 70%;
-  height: 70%;
+  width: 75%;
+  height: 75%;
   z-index: 300;
-  margin: 0 auto;
-  word-break: break-all;
+  margin: 2rem auto;
+  word-break: break-word;
+  padding: 1rem 2rem 2rem 2rem;
   background-color: red;
+}
+
+.popupImageWrapper {
+  max-height: 50%;
+  overflow: hidden;
+}
+
+.popupImageContainer {
+  max-height: inherit;
+  transform: translateY(50%);
+}
+
+.popupImageContainer img {
+  display: block;
+  transform: translateY(-50%);
 }
 
 /*   ---- FOOTER STYLES ---- */
