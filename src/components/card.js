@@ -1,16 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Card = ({ name, imageUrl, handleClick }) => (
-  // eslint-disable-next-line
-  <article className = "card" onClick={(e) => handleClick(e)}>
-    <img src={imageUrl} alt={`${name}`} />
-    <div className="cardLabel flex justify-center items-center">
-      {name}
-    </div>
+const Card = ({ name, imageUrl, handleClick }) => {
+  const styles = { backgroundImage: `url(${imageUrl})` };
+  return (
 
-  </article>
-);
+    // eslint-disable-next-line
+    <article className = "card" onClick={(e) => handleClick(e)}>
+
+      <div style={styles} className="cardImage" />
+      <div className="cardLabel flex justify-center items-center">
+        {name}
+      </div>
+
+    </article>
+  );
+};
 
 export default Card;
 

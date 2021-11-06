@@ -19,7 +19,7 @@ const Popup = ({
       <div>
         <ProjectDetail label="name" description={name} />
         <ProjectDetail label="description" description={description} />
-        <ProjectDetail label="technologies" description={technologies} />
+        <ProjectDetail label="technologies" description={technologies.join(',')} />
         <div><a href={repoLink}>repoLink</a></div>
         <div><a href={demoUrl}>demoUrl</a></div>
       </div>

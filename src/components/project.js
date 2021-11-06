@@ -17,7 +17,7 @@ const Project = ({
   };
   return (
     <article>
-      { !toggleOn && <Card name={name} handleClick={handleClick} imageUrl={imageUrl} />}
+      <Card name={name} handleClick={handleClick} imageUrl={imageUrl} />
 
       { toggleOn && (
       <Popup
